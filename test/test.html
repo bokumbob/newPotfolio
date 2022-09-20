@@ -59,34 +59,23 @@
             const a = document.querySelector("path");
             console.log(a.getTotalLength())
         </script>      -->
-    <!-- <svg width="1920" height="2727" viewBox="0 0 1920 2727" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M2175.27 588.631C2284.86 541.903 2361.67 433.189 2361.67 306.534C2361.67 137.24 2224.43 0 2055.14 0C1942.84 0 1844.65 60.3823 1791.26 150.45C1751.08 140.337 1709 134.966 1665.68 134.966C1478.13 134.966 1314.09 235.613 1224.62 385.843C1166.4 389.574 1115.43 419.942 1083.77 464.889C1017.66 440.873 946.306 427.775 871.895 427.775C687.127 427.775 521.221 508.533 407.549 636.677C304.05 560.712 176.303 515.846 38.0771 515.846C-307.143 515.846 -587 795.702 -587 1140.92C-587 1363.78 -470.369 1559.41 -294.815 1670.08C-294.938 1674.7 -295 1679.34 -295 1683.99C-295 1689.68 -294.907 1695.35 -294.723 1701H2144.08C2144.26 1695.35 2144.35 1689.68 2144.35 1683.99C2144.35 1590.48 2119.33 1502.82 2075.63 1427.32C2119.33 1351.83 2144.35 1264.17 2144.35 1170.66C2144.35 1086.96 2124.31 1007.94 2088.75 938.146C2145.47 855.616 2178.67 755.661 2178.67 647.953C2178.67 627.889 2177.51 608.094 2175.27 588.631Z" fill="url(#paint0_linear_40_5)" fill-opacity="0.6"/>
-            <rect y="1669" width="2362" height="2469" fill="url(#paint1_linear_40_5)"/>
-            <defs>
-            <linearGradient id="paint0_linear_40_5" x1="887.335" y1="0" x2="887.335" y2="1766" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#FF8743" stop-opacity="0"/>
-            <stop offset="1" stop-color="#F84795"/>
-            </linearGradient>
-            <linearGradient id="paint1_linear_40_5" x1="1181" y1="1669" x2="1181" y2="4138" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#FB9AC1"/>
-            <stop offset="1" stop-color="#A762FF"/>
-            </linearGradient>
-            </defs>
-            </svg> -->
-                        <!-- <svg width="1920" height="2727" viewBox="0 0 1920 2727" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="Group 28">
-                <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M2175.27 588.631C2284.86 541.903 2361.67 433.189 2361.67 306.534C2361.67 137.24 2224.43 0 2055.14 0C1942.84 0 1844.65 60.3823 1791.26 150.45C1751.08 140.337 1709 134.966 1665.68 134.966C1478.13 134.966 1314.09 235.613 1224.62 385.843C1166.4 389.574 1115.43 419.942 1083.77 464.889C1017.66 440.873 946.306 427.775 871.895 427.775C687.127 427.775 521.221 508.533 407.549 636.677C304.05 560.712 176.303 515.846 38.0771 515.846C-307.143 515.846 -587 795.702 -587 1140.92C-587 1363.78 -470.369 1559.41 -294.815 1670.08C-294.938 1674.7 -295 1679.34 -295 1683.99C-295 1689.68 -294.907 1695.35 -294.723 1701H2144.08C2144.26 1695.35 2144.35 1689.68 2144.35 1683.99C2144.35 1590.48 2119.33 1502.82 2075.63 1427.32C2119.33 1351.83 2144.35 1264.17 2144.35 1170.66C2144.35 1086.96 2124.31 1007.94 2088.75 938.146C2145.47 855.616 2178.67 755.661 2178.67 647.953C2178.67 627.889 2177.51 608.094 2175.27 588.631Z" fill="url(#paint0_linear_40_5)" fill-opacity="0.6"/>
-                <rect id="Rectangle 11" y="1669" width="2362" height="2469" fill="url(#paint1_linear_40_5)"/>
-                </g>
-                <defs>
-                <linearGradient id="paint0_linear_40_5" x1="887.335" y1="0" x2="887.335" y2="1766" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#FF8743" stop-opacity="0"/>
-                <stop offset="1" stop-color="#F84795"/>
-                </linearGradient>
-                <linearGradient id="paint1_linear_40_5" x1="1181" y1="1669" x2="1181" y2="4138" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#FB9AC1"/>
-                <stop offset="1" stop-color="#A762FF"/>
-                </linearGradient>
-                </defs>
-                </svg> -->
-                <!-- 위 무늬를 클리핑 마스크 하고 디스턴스 값을 스크롤 값이랑 연동한다면? -->
+
+                /* .first-s .cliping::before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: url("../img/s1-bg.svg");
+                    transition: ease-in-out 0.3s;
+                    /* background-position-y: 245px; */
+                    /* box-shadow: 10px 10px rgba(0, 0, 0, 1); */
+                    /* transform: perspective(100px) rotateY(45deg); */
+                    /* 이제 여길 마우스 커서에 따라 움직여주면 됨 */
+                /* }
+                /* .first-s .cliping::after{
+                    -webkit-mask-image: url('../img/clip.svg');
+                    mask-image: url('../img/clip.svg');
+                } */
+                /* }  */
+                비포에 백그라운드 이미지 주는 법
+                css의 filter는 포토샵의 오버레이 블러 그림자 등등의 기능이 있다
