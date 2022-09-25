@@ -1,5 +1,7 @@
-const poArr = ['별말, 씀', '닷-햄', '포트폴리오', '임시'];
+// const poArr = ['별말, 씀', '닷-햄', '포트폴리오', '임시'];
+export const poArr = ['별말, 씀', '닷-햄', '포트폴리오'];
 const project = document.querySelector('.project-wrap');
+const moveLength = 22.4;
 
 let selectNumber = 1;
 
@@ -11,7 +13,7 @@ project.innerHTML = projectArticle.join('');
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
 const articleWrap = document.querySelector('.project-wrap');
-const article = document.querySelectorAll('.project-wrap article');
+export const article = document.querySelectorAll('.project-wrap article');
 
 let left = 0;
 
@@ -30,12 +32,11 @@ const last = document.createElement('article');
 last.id = 'remove2';
 last.innerHTML = LastArticle();
 
-
 next.addEventListener('click', () => {
     if(selectNumber < article.length - 1) {
         selectNumber ++;
-        left -= 22.4;
-        selectNumber === poArr.length - 1 && !document.querySelector('#remove2') && articleWrap.insertBefore(last, null)
+        left -= moveLength;
+        selectNumber === poArr.length - 1 && !document.querySelector('#remove2') && articleWrap.insertBefore(last, null);
     }
     else {
         selectNumber = 0;
@@ -53,18 +54,19 @@ next.addEventListener('click', () => {
     // const select = document.querySelector('.select');
         // console.log(select)
     })
-    articleWrap.style.left = `${left}vw`
+    // articleWrap.style.left = `${left}vw`
+    articleWrap.style.left = `${left}vw`;
 })
 
 prev.addEventListener('click', () => {
     if(selectNumber >= 1) {
         selectNumber --;
-        selectNumber === 0 ? left = 0 : left += 22.4;
+        selectNumber === 0 ? left = 0 : left += moveLength;
         selectNumber === 0 && !document.querySelector('#remove') && articleWrap.insertBefore(first, article[0]);
     }
     else {
         selectNumber = article.length - 1;
-        left = -22.4 * (poArr.length - 1);
+        left = -moveLength * (poArr.length - 1);
         selectNumber === poArr.length - 1 && !document.querySelector('#remove2') && articleWrap.insertBefore(last, null)
     }
     article.forEach((item, idx) => {

@@ -1,4 +1,4 @@
-const skillArr = ['scss', 'html', 'css', 'typescript', 'javascript', 'react', 'ai', 'ps', 'figma'];
+export const skillArr = ['html', 'css', 'scss', 'javascript', 'typescript', 'react', 'ai', 'ps', 'figma'];
 
 const skillWrap = document.querySelector('.skill-img');
 

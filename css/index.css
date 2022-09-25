@@ -56,7 +56,8 @@ a {
 }
 
 body {
-    font-family: 'PyeongChangPeace-Light';
+    font-family: 'PyeongChangPeace-Light', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -167,7 +168,7 @@ section {
 .first-s svg.big {
     position: absolute;
     right: -2vw;
-    bottom: 12vw;
+    bottom: 13vw;
     z-index: 1;
     stroke-dasharray: unset;
     stroke-dashoffset: unset;
@@ -251,6 +252,8 @@ section {
     -webkit-mask-size: 100%;
     transition: ease-in-out;
     background: url("../img/s1-bg.svg");
+    background-position-y: center;
+    transition: cubic-bezier(0.15,-0.01, 0.14, 0.99) 2s; 
 }
 
 .first-s .cliping img {
@@ -258,6 +261,7 @@ section {
     position: absolute;
     top: 33%;
     left: 33%;
+    transition: cubic-bezier(0.15,-0.01, 0.14, 0.99) 4s;
 }
 
 .first-s div {
@@ -278,9 +282,28 @@ section {
     margin-bottom: 2vw;
 }
 
+.two-s .about-me {
+    margin-left: -25vw;
+    opacity: 0;
+    transition: ease-in-out 1s;
+}
+
+.two-s.on .about-me {
+    margin-left: unset;
+    opacity: 1;
+}
+
 .two-s .skill {
     margin-top: 4.2vw;
     text-align: right;
+    margin-right: -25vw;
+    opacity: 0;
+    transition: ease-in-out 1s;
+}
+
+.two-s.on .skill { 
+    margin-right: unset;
+    opacity: 1;
 }
 
 .two-s p {
@@ -295,6 +318,11 @@ section {
     row-gap: 25px;
     place-items: center;
     position: absolute;
+    right: -25vw;
+    transition: ease-in-out 1s;
+}
+
+.two-s.on .skill .skill-img {
     right: 0;
 }
 
@@ -326,13 +354,21 @@ section {
     overflow: hidden;
     position: relative;
     top: 50px;
+    left: 1.5vw;
+    margin: 0 auto;
+    justify-content: center;
 }
 
 .three-s .project-wrap {
-    width: auto;
+    width: 100vw;
     height: inherit;
     position: absolute;
+    /* left: -10vw; */
     margin: 1.5vw 0 2.7vw 0;
+    transition: ease-in-out 500ms;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    place-items: center;
 }
 
 .three-s .project-wrap article {
@@ -380,6 +416,7 @@ section {
     justify-content: space-between;
     margin: 0 auto;
     position: relative;
+    top: 5vw;
 } 
 
 .three-s .project-btn button { 
