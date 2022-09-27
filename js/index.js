@@ -12,7 +12,6 @@ let starLeftMove = 0;
 // console.log()
 // console.log(firstBg.getBoundingClientRect())
 
-// 이 부분 vw 로 계산해주긱 필요
 stars.addEventListener('click', (e) => {
     stars.style.top = `${e.clientX}px`;
 })
@@ -32,7 +31,6 @@ firstS?.addEventListener('mousemove', (e) => {
         starTopMove = 750;
     }
      if(e.clientX - firstBg.getBoundingClientRect().left <= 150 ) {
-        // stars.style.left = `${e.clientX - 870}px`;
         starLeftMove = 150;
     } else if (e.clientX - firstBg.getBoundingClientRect().left >= 500) {
         starLeftMove = 500; 

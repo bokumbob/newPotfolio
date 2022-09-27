@@ -1,0 +1,99 @@
+section svg.small {
+    stroke-dasharray: 190;
+    stroke-dashoffset: 190;
+    animation: dash 5s cubic-bezier(0.01, 1.13, 1, 1) infinite;
+}
+
+.first-s svg.big {
+    stroke-dasharray: unset;
+    stroke-dashoffset: unset;
+    stroke-dasharray: 325;
+    stroke-dashoffset: 325;
+    animation: dash2 5s cubic-bezier(0.01, 1.13, 1, 1) infinite 0.5s;
+}
+
+.first-s svg.big .squere {
+    animation: star2 5s cubic-bezier(0.01, 1.13, 1, 1) infinite 1s;
+}
+
+section svg .squere {
+    animation: star 5s cubic-bezier(0.01, 1.13, 1, 1) infinite 0.5s;
+}
+
+section .star-fall {
+    /* width: auto; */
+    width: 6.5vw!important;
+    /* width: 6.5vw!important; */
+    height: 10vw;
+    position: absolute;
+    opacity: 0.6;
+    /* stroke-dasharray: 190;
+    stroke-dashoffset: 190; */
+}
+
+section .star-fall svg {
+    right: 0;
+    bottom: 0;
+    animation: dash 5s cubic-bezier(0.01, 1.13, 1, 1);
+    /* animation: dash_another 5s cubic-bezier(0.01, 1.13, 1, 1); */
+}
+
+@keyframes star {
+    15%{
+        opacity: 1;
+    } 19% {
+        transform: scale(1.2);
+    } 22% {
+        transform: scale(1);
+        opacity: 0;
+    } 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes star2 {
+    15%{
+        opacity: 1;
+    } 19% {
+        transform: scale(1.2);
+    } 22% {
+        transform: scale(1);
+        opacity: 0;
+    } 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes dash {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    8% {
+        stroke-dashoffset: 190;
+    } 100% {
+        stroke-dashoffset: 190;
+    }
+}
+
+@keyframes dash2 {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    8% {
+        stroke-dashoffset: 325;
+    } 100% {
+        stroke-dashoffset: 325;
+    }
+}
+
+/* @keyframes dash_another { */
+    /* 0%{ */
+        /* stroke-dashoffset: 0; */
+    /* } */
+    /* 8%{
+        stroke-dashoffset: 122;
+    }
+    100% {
+        stroke-dashoffset: 122;
+    } */
+/* } */

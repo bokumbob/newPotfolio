@@ -87,11 +87,14 @@ header ul li a:hover {
 
 main {
     width: 100vw;
-    padding: 0 11%;
-    box-sizing: border-box;
     background: url('../img/bg2.svg') no-repeat bottom;
     background-size: 100vw;
     position: relative;
+}
+
+section { 
+    padding: 0 11%;
+    box-sizing: border-box;
 }
 
 .two-bg {
@@ -158,11 +161,8 @@ section {
 .first-s svg {
     position: absolute;
     right: 7vw;
+    bottom: 23vw;
     z-index: 1;
-    stroke-dasharray: 190;
-    stroke-dashoffset: 190;
-    animation: dash 5s cubic-bezier(0.01, 1.13, 1, 1) infinite;
-    /* animation-timing-function: 5s */
 }
 
 .first-s svg.big {
@@ -170,72 +170,16 @@ section {
     right: -2vw;
     bottom: 13vw;
     z-index: 1;
-    stroke-dasharray: unset;
-    stroke-dashoffset: unset;
-    stroke-dasharray: 325;
-    stroke-dashoffset: 325;
-    animation: dash2 5s cubic-bezier(0.01, 1.13, 1, 1) infinite 0.5s;
-    /* animation-timing-function: 5s */
 }
 
 .first-s svg.big .squere {
     transform: scale(1);
     opacity: 0;
-    animation: star2 5s cubic-bezier(0.01, 1.13, 1, 1) infinite 1s;
 }
 
-.first-s svg .squere {
+section svg .squere {
     transform: scale(1);
     opacity: 0;
-    animation: star 5s cubic-bezier(0.01, 1.13, 1, 1) infinite 0.5s;
-}
-
-@keyframes star {
-    15%{
-        opacity: 1;
-    } 19% {
-        transform: scale(1.2);
-    } 22% {
-        transform: scale(1);
-        opacity: 0;
-    } 100% {
-        opacity: 0;
-    }
-}
-
-@keyframes star2 {
-    15%{
-        opacity: 1;
-    } 19% {
-        transform: scale(1.2);
-    } 22% {
-        transform: scale(1);
-        opacity: 0;
-    } 100% {
-        opacity: 0;
-    }
-}
-
-@keyframes dash {
-    0%{
-        stroke-dashoffset: 0;
-    }
-    8% {
-        stroke-dashoffset: 190;
-    } 100% {
-        stroke-dashoffset: 190;
-    }
-}
-
-@keyframes dash2 {
-    0%{
-        stroke-dashoffset: 0;
-    }
-    8% {
-        stroke-dashoffset: 325;
-    } 100% {
-        stroke-dashoffset: 325;
-    }
 }
 
 .first-s .cliping{
@@ -273,6 +217,7 @@ section {
 }
 
 .two-s {
+    height: 65vh;
     position: relative;
     padding-top: 4vw;
 }
@@ -323,7 +268,7 @@ section {
 }
 
 .two-s.on .skill .skill-img {
-    right: 0;
+    right: 10vw;
 }
 
 .two-s .skill .skill-img img {
@@ -357,6 +302,7 @@ section {
     left: 1.5vw;
     margin: 0 auto;
     justify-content: center;
+    z-index: 2;
 }
 
 .three-s .project-wrap {
@@ -378,6 +324,7 @@ section {
     background-color: white;
     position: relative;
     display: inline-block;
+    transition: ease-in-out 0.5s;
 }
 
 .three-s .project-wrap article:not(.select) {
@@ -387,8 +334,8 @@ section {
     /* position: absolute; */
 }
 
-.three-s .project-wrap article:not(.select):first-child {
-    /* transform: scale(0.7) rotate(-15deg); */
+.three-s .project-wrap article.select {
+    transform: scale(1) rotate(0deg)!important;
 }
 
 .three-s .project-wrap article div {
@@ -396,6 +343,13 @@ section {
     height: 92%;
     border: 1px solid black;
     border-radius: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.three-s .project-wrap article div img {
     position: absolute;
     top: 50%;
     left: 50%;
