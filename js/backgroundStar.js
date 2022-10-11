@@ -1,12 +1,6 @@
-const main = document.querySelector('main');
 const firstSection = document.querySelector('.first-s');
 const twoSection = document.querySelector('.two-s');
 const threeSection = document.querySelector('.three-s');
-
-// 랜덤 위치에 계속 생성되어야 함
-// 애니메이션이 끝나면 컴포넌트가 사라져야 함
-// 크기도 0.8 ~ 1.1 사이에서 랜덤
-// 나타나는 시간의 간격도 1초 ~ 3초로 랜덤 
 
 const starFallCreate = () => {
     return (
@@ -22,8 +16,6 @@ const starFallCreate = () => {
     </svg>`
     )
 }
-
-const aq = document.styleSheets[2].cssRules[document.styleSheets[2].cssRules.length - 1];
 
 const innerStar = (section) => {
     // console.log(section)
@@ -44,18 +36,6 @@ const innerStar = (section) => {
         section.removeChild(currentStar);
     });
 };
-
-    // const currentStarLine = document.querySelector('.star-fall:last-child path');
-
-    // const length = currentStarLine.getBoundingClientRect().width;
-
-    // currentStar.style.strokeDashoffset = length;
-    // currentStar.style.strokeDasharray = length;
-
-    // aq.appendRule(`8% {stroke-dashoffset: ${length}}`);
-    // aq.appendRule(`100% {stroke-dashoffset: ${length}}`);
-    // 이런 식으로 대시 어레이 추가해주면 끊기는 잔상 버그 발생
-    // 그냥 고정 값으로 css에 줘도 되는 듯
 
 const randomTime = (section) => {
     let sec = Math.floor(Math.random() * 9) + 1;
@@ -91,15 +71,3 @@ const randomCreate = setInterval(() => {
     twoStar();
     threeStar();
 }, 3000);
-
-// innerStar()
-// innerStar()
-// innerStar()
-// 이러면 됨
-
-// firstSection.append(starFall);
-// firstSection.appendChild(starFall);
-// 이 구문을 여러 개 쓰는 거로는 여러 개 만들어지지 않음
-
-// console.dir();
-// aq.appendRule('50% {opacity: 0}');

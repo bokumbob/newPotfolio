@@ -1,0 +1,30 @@
+/* https://jootc.com/p/201811262270 
+    웹서버 구축 */ 
+
+    #object, #object2 {
+        position: absolute;
+        transition: 0.4s ease-in-out;
+    }
+
+    #object{
+        opacity: 1;
+    }
+
+    #object2{
+        opacity: 0;
+    }
+
+    .sw-detail-line{
+        stroke-dasharray: 870px;
+        stroke-dashoffset: 870px;
+        animation: dash3 ease-in-out 3.5s forwards;
+    }
+    
+    @keyframes dash3 {
+        to {
+            stroke-dashoffset: 0;
+        }
+        from {
+            stroke-dashoffset: 870px;
+        }
+    }
